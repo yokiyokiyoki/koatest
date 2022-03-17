@@ -1,0 +1,19 @@
+{
+  "name": "koaTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^10.1.1",
+    "nodemon": "^2.0.15"
+  }
+}
