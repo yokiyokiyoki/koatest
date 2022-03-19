@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>聊天记录实时</title>
+        <meta name="keywords" />
+        <meta name="description" />
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+        <link
+            rel="shortcut icon"
+            href="//jtcospublic.ciccten.com/config-server/1613703982174397515/jtlogo.png"
+            type="image/x-icon"
+        />
+        <!-- 如果有需要预先加载的js逻辑, 可添加到这里 -->
+        <script>
+            const ws = new WebSocket(`ws://${location.host}`);
+
+            ws.onopen = () => {
+                console.log('WebSocket onopen');
+            }
+
+            ws.onmessage = e => {
+                const content= document.querySelector('.content')
+                // content.insertAdjacentHTML('afterbegin', e.data);
+                console.log('WebSocket onmessage');
+                console.log('WebSocket message received：', e);
+                console.log('WebSocket data received：', e.data);
+                content.innerHTML=e.data
+            }
+            
+
+            ws.onclose = e => {
+                console.log("WebSocket onclose");
+            };
+        </script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <pre class="content"> <%= data %></pre>
+           
+        </div>
+    </body>
+</html>

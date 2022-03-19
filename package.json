@@ -1,5 +1,5 @@
 {
-  "name": "koaTest",
+  "name": "koa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,9 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@wecom/crypto": "^1.0.1",
+    "ejs": "^3.1.6",
+    "file-type": "^15.0.0",
+    "forever": "^4.0.3",
     "koa": "^2.13.4",
     "koa-bodyparser": "^3.2.0",
     "koa-router": "^10.1.1",
-    "nodemon": "^2.0.15"
+    "koa-views": "^8.0.0",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.15",
+    "wework-chat-node": "^1.0.0",
+    "ws": "^8.5.0"
   }
 }
